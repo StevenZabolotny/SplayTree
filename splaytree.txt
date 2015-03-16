@@ -1,0 +1,15 @@
+Steven Zabolotny Period 7
+
+Link: https://www.cs.usfca.edu/~galles/visualization/SplayTree.html
+
+A splay tree is a special type of binary search tree. As a recap from last year, a binary search tree is a data structure which stores values in nodes, with greater values to the right and lesser values to the left. Effectively, this allows the binary search method to be easily performed on the data set. However, a splay tree has one major difference: it reorganizes elements that have recently been inserted or searched for such that they are easy to access. It does this through an action called splaying. 
+
+Splaying is performed whenever an element is accessed. Splaying involves moving the accessed node to the top of the tree whilst maintaining the binary order. In order to understand this, we must understand tree rotations, which is a key element in splaying. Tree rotations involve rotating on an axis between some node and its parent. The chosen node becomes the new parent, and its child is the old parent node in the opposite direction as it was before. If the child had a node in the same direction as the parent is in now, it becomes the parents new child in the opposite direction. 
+
+Link: http://upload.wikimedia.org/wikipedia/commons/2/23/Tree_rotation.png
+
+There are three operations used to splay. The zig step is used when the parent node is the root and involves one rotation to move the chosen node to the top. The zig-zig step and the zig-zag step involve multiple rotations starting at the upper node and down to the chosen node, with the former being if the parent and chosen node are on the same side and the latter being if they are on opposite sides. 
+
+The remaining operations: joining, splitting, inserting, and deleting all use splaying to achieve their goals.
+
+Why is the splay tree good? It's simple to implement, efficient, and doesn't take up much memory. Compared to other more complicated binary search tree variants, the splay tree (although less efficient under certain circumstances) is far simpler to code. The most obvious benefit is splaying. Splaying makes it so that values that are accessed often appear closer to the top and therefore become easier to access again. This makes the splay tree more efficient for repetitive processes. 
